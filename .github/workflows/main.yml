@@ -9,11 +9,15 @@ jobs:
     steps:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3
-        env:
+        
+        with:
           USERNAME: ubuntu
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.PASSWORD }}
           script: whoami
+      # - name: Debug Host
+      #   run: echo "Host: ${{ secrets.HOST }}"
+
             
       
 
