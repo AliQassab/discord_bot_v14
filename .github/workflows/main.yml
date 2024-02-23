@@ -14,8 +14,8 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           USERNAME: ubuntu
-          HOST: ${{ secrets.HOST }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          HOST: ec2-3-84-84-151.compute-1.amazonaws.com
+          PASSWORD: ubuntu@1980
           script: whoami
 
      
