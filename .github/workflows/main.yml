@@ -14,10 +14,11 @@ jobs:
 
       
         with:
+          HOST: ${{ secrets.HOST }}
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GUILD_ID: ${{ secrets.GUILD_ID }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          aws-region: eu-west-2
+          
 
       
