@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: SSH Remote Commands
-        uses:  appleboy/ssh-action@v1.0.4
+        uses:  appleboy/ssh-action@v1.0.3
 
       
         with:
