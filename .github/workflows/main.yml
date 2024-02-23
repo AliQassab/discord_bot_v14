@@ -7,16 +7,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          # DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          # GUILD_ID: ${{ secrets.GUILD_ID }}
+          
          
           script: whoami
              # cd discord_bot_v14
