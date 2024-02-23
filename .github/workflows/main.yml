@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH Remote Commands
-        uses:  appleboy/ssh-action@v1.0.3
+      - name: Checkout
+        uses: actions/checkout@v1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER_NAME }}
