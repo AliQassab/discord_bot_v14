@@ -20,11 +20,11 @@ jobs:
           # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # GUILD_ID: ${{ secrets.GUILD_ID }}
          
-          script: |
-             cd discord_bot_v14
-             git pull
-             npm i
-             node stop src/app.js
-             node start src/app.js
+          script: whoami
+             # cd discord_bot_v14
+             # git pull
+             # npm i
+             # node stop src/app.js
+             # node start src/app.js
 
       
