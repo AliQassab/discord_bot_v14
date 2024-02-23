@@ -11,6 +11,7 @@ jobs:
         uses:  appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.PASSWORD }}
           # DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
