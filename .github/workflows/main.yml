@@ -10,9 +10,9 @@ jobs:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3
         with:
-          USERNAME: ubuntu
-          HOST: ec2-3-84-84-151.compute-1.amazonaws.com
-          PASSWORD: ubuntu@1980
+          USERNAME: ${{ secrets.USER_NAME }}
+          HOST: ${{ secrets.HOST }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           script: whoami
 
      
