@@ -10,9 +10,9 @@ jobs:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.HOST }}
+          HOST: ${{ secrets.HOST }}
           # username: ${{ secrets.USER_NAME }}
-          password: ${{ secrets.PASSWORD }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           # port: ${{ secrets.PORT }}
           
          
