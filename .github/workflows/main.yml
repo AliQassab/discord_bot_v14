@@ -7,9 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug Host
-        run: echo "Host:${{ secrets.HOST }}"
-
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3
         with:
