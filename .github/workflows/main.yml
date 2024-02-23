@@ -7,18 +7,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # - name: SSH Remote Commands
-      - name: Run a one_line
-        run: echo Hello, world!
-        # uses:  appleboy/ssh-action@v1.0.3
-        # with:
-          # host: ${{ secrets.HOST }}
-          # password: ${{ secrets.PASSWORD }}
+      - name: SSH Remote Commands
+        uses:  appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          password: ${{ secrets.PASSWORD }}
           # DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # GUILD_ID: ${{ secrets.GUILD_ID }}
          
-          # script: whoami
+          script: whoami
              # cd discord_bot_v14
              # git pull
              # npm i
