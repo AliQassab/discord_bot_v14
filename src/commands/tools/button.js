@@ -4,7 +4,7 @@ import {
   ActionRowBuilder,
   ButtonStyle,
 } from "discord.js";
-// import { ButtonBuilder, ActionRowBuilder, ButtonStyle } from "discord-buttons";
+
 const buttonCommand = {
   data: new SlashCommandBuilder()
     .setName("button")

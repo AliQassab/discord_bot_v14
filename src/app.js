@@ -4,22 +4,19 @@ import { Client, Collection, GatewayIntentBits } from "discord.js";
 
 import { handleMessageCreate } from "./chat/chatGenerator.js";
 // const client = new Client({ intents: 32767 });
-const client = new Client({
+export const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMembers,
-     
     32767,
   ],
 });
 
-
 client.commandArray = [];
 
-const collections = ["commands",'select', "buttons"];
-
+const collections = ["commands", "select", "buttons"];
 
 collections.forEach((collection) => {
   client[collection] = new Collection();
