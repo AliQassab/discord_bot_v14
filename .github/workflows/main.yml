@@ -18,7 +18,7 @@ jobs:
             cd discord_bot_v14
             git pull
             npm i
-            npm run nodemon
+            nohup src/app.js &
 
      
 
