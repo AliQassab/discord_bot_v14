@@ -14,11 +14,7 @@ jobs:
           USERNAME: ${{ secrets.USER_NAME }}
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          script: |
-            cd discord_bot_v14
-            git pull
-            npm i
-            nohup src/app.js &
+          script: nohup src/app.js &
 
      
 
