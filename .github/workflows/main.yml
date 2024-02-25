@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3  
-          echo "${DISCORD_TOKEN}"
+          echo $DISCORD_TOKEN
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
