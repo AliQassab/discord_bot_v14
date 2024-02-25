@@ -20,7 +20,7 @@ jobs:
           USERNAME: ${{ secrets.USER_NAME }}
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          script: echo $DISCORD_TOKEN
+          script: echo "${{ secrets.DISCORD_TOKEN }}"
           # |
           #   cd discord_bot_v14
           #   npm run nodemon
