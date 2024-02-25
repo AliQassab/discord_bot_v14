@@ -10,11 +10,21 @@ jobs:
     steps:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
         with:
           USERNAME: ${{ secrets.USER_NAME }}
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.PASSWORD }}
-          script: nohup src/app.js &
+          script: |
+            cd discord_bot_v14
+            git pull
+            npm i
+            npm run nodemon
+
 
      
 
