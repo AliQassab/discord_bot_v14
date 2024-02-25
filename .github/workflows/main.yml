@@ -15,14 +15,14 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GUILD_ID: ${{ secrets.GUILD_ID }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          run: echo "${{ secrets.DISCORD_TOKEN }}"
-        # with:
-        #   USERNAME: ${{ secrets.USER_NAME }}
-        #   HOST: ${{ secrets.HOST }}
-        #   PASSWORD: ${{ secrets.PASSWORD }}
-        #   script: |
-        #     cd discord_bot_v14
-        #     npm run nodemon
+          
+        with:
+          USERNAME: ${{ secrets.USER_NAME }}
+          HOST: ${{ secrets.HOST }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          script: |
+            cd discord_bot_v14
+            npm run nodemon
        
 
 
