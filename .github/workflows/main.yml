@@ -1,3 +1,4 @@
+
 name: Deploy 
 on:
   push:
@@ -9,7 +10,8 @@ jobs:
     
     steps:
       - name: SSH Remote Commands
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.0.3  
+          
         with:
           USERNAME: ${{ secrets.USER_NAME }}
           HOST: ${{ secrets.HOST }}
@@ -18,12 +20,5 @@ jobs:
             cd discord_bot_v14
             git pull
             npm i
-            npm run nodemon
-
-     
-
-            
-      
-
-      
-
+            pm2 stop src/app.js
+            pm2 start src/app.js
