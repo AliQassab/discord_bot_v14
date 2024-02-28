@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Debugging - List Contents of Current Directory
+        run: ls -la
+
+      - name: Debugging - Print Working Directory
+        run: pwd
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3  
           
