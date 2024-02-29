@@ -1,7 +1,8 @@
+
 name: Deploy 
 on:
   push:
-    branches: [ main ]
+    branche : [ main ]
       
 jobs:
   deploy:
@@ -10,11 +11,6 @@ jobs:
     steps:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v1.0.3  
-        env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GUILD_ID: ${{ secrets.GUILD_ID }}
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
           
         with:
           USERNAME: ${{ secrets.USER_NAME }}
@@ -22,14 +18,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
             cd discord_bot_v14
-            npm run nodemon
-       
-
-
-     
-
-            
-      
-
-      
-
+            git pull
+            npm i
+            pm2 stop chatbot
+            pm2 start src/app.js --name chatbot

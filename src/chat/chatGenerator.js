@@ -4,7 +4,7 @@ import { AttachmentBuilder, EmbedBuilder } from "discord.js";
 import { OpenAI } from "openai";
 
 import { imagesGenerator } from "./imagesGenerator.js";
-import { client } from "../app.js";
+
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,

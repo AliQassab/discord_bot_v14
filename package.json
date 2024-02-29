@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "nodemon": " nodemon src/app.js"
+    "nodemon": " nodemon src/app.js",
+    "test": "node src/test.js"
   },
   "author": "Ali Q",
   "license": "ISC",
