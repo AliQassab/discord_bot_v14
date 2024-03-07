@@ -30,9 +30,7 @@ for (const folder of funcFolder) {
     .filter((file) => file.endsWith(".js"));
 
   for (const file of funcFile) {
-    // import(`./functions/${folder}/${file}`).then((module) =>
-    //   module.default(client)
-    // );
+   
     import(`./functions/${folder}/${file}`)
       .then((module) => {
         if (typeof module.default === "function") {

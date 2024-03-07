@@ -11,8 +11,7 @@ export default async function handleEvents(client) {
       case "client":
         for (const file of eventFiles) {
           const event = await import(`../../events/client/${file}`);
-          // console.log(eventFiles);
-          // console.log("event.default", event.default);
+          
           if (event.default.once) {
             client.once(event.default.name, (...args) =>
               event.default.execute(...args, client)

@@ -22,7 +22,6 @@ export const handleMessageCreate = async (message, client) => {
   )
     return;
 
-  // Check if the user is starting a new conversation
   if (!conversationHistory[message.author.id]) {
     conversationHistory[message.author.id] = [];
   }
