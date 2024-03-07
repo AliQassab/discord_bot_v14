@@ -2,7 +2,7 @@
 name: Deploy 
 on:
   push:
-    branches: [ main ]
+    branche : [ main ]
       
 jobs:
   deploy:
@@ -20,5 +20,5 @@ jobs:
             cd discord_bot_v14
             git pull
             npm i
-            pm2 stop src/app.js
-            pm2 start src/app.js
+            pm2 stop chatbot
+            pm2 start src/app.js --name chatbot
